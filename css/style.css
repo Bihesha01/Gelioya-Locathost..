@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --green-dark: #0b3821;
+    --green: #16713d;
+    --green-light: #dcefe2;
+    --text: #17251c;
+    --muted: #68736c;
+    --border: #e4e9e5;
+    --bg: #f6f8f6;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: 'Inter', Arial, sans-serif;
+    color: var(--text);
+    background: #fff;
+}
+
+.site-nav {
+    background: rgba(255,255,255,.97);
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 2px 12px rgba(0,0,0,.04);
+}
+
+.navbar-brand { color: var(--green-dark) !important; }
+.brand-mark {
+    display: inline-flex;
+    width: 34px;
+    height: 34px;
+    align-items: center;
+    justify-content: center;
+    margin-right: 7px;
+    border-radius: 10px;
+    background: var(--green-dark);
+    color: white;
+    font-size: 12px;
+}
+.nav-link {
+    color: #3d4741 !important;
+    margin: 0 5px;
+    font-weight: 500;
+}
+.nav-link.active, .nav-link:hover {
+    color: var(--green-dark) !important;
+    border-bottom: 2px solid var(--green);
+}
+
+.hero {
+    min-height: 420px;
+    border-radius: 22px;
+    overflow: hidden;
+    position: relative;
+    background:
+        linear-gradient(90deg, rgba(5,39,18,.78), rgba(5,39,18,.18)),
+        url('Images/places-to-visit-in-Kandy.jpg')
+        center/cover;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 600px;
+    padding: 55px;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    font-weight: 800;
+    line-height: 1.05;
+}
+
+.hero-content p { font-size: 1.15rem; }
+
+.btn-green {
+    background: var(--green);
+    color: white;
+    border: none;
+}
+.btn-green:hover { background: var(--green-dark); color: white; }
+
+.map-preview {
+    min-height: 420px;
+    border-radius: 22px;
+    overflow: hidden;
+    position: relative;
+    background:
+        linear-gradient(rgba(235,241,228,.35), rgba(235,241,228,.35)),
+        url('https://tile.openstreetmap.org/13/6041/4096.png');
+    background-size: cover;
+}
+
+.preview-map-content {
+    height: 100%;
+    min-height: 420px;
+    background:
+        radial-gradient(circle at 20% 40%, #277c4c 0 7px, transparent 8px),
+        radial-gradient(circle at 55% 25%, #277c4c 0 7px, transparent 8px),
+        radial-gradient(circle at 70% 55%, #277c4c 0 7px, transparent 8px),
+        radial-gradient(circle at 40% 72%, #277c4c 0 7px, transparent 8px),
+        linear-gradient(130deg, #e8efd9, #d7e8cc 45%, #eef1d9);
+    position: relative;
+}
+.preview-map-content::after {
+    content: 'INTERACTIVE MAP →';
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    padding: 10px 15px;
+    border-radius: 999px;
+    background: rgba(255,255,255,.92);
+    color: var(--green-dark);
+    font-weight: 700;
+    font-size: .8rem;
+}
+
+.section-title {
+    font-size: 1.65rem;
+    font-weight: 800;
+}
+
+.attraction-card {
+    height: 100%;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    overflow: hidden;
+    background: white;
+    transition: .2s ease;
+}
+.attraction-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(10,40,20,.12);
+}
+.attraction-card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+.attraction-card .card-body { padding: 18px; }
+
+.badge-category {
+    background: var(--green-light);
+    color: var(--green-dark);
+    font-weight: 700;
+}
+
+.feature-panel {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+}
+
+.page-banner {
+    background: linear-gradient(135deg, var(--green-dark), #23824a);
+    color: white;
+    padding: 55px 0;
+}
+
+.detail-image {
+    width: 100%;
+    height: 430px;
+    object-fit: cover;
+    border-radius: 22px;
+}
+
+.info-box {
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 18px;
+    background: white;
+}
+
+#map {
+    height: 620px;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+}
+
+.planner-item {
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    padding: 14px;
+    margin-bottom: 12px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    background: white;
+}
+.planner-item img {
+    width: 72px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.timeline {
+    position: relative;
+    padding-left: 35px;
+}
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 8px;
+    bottom: 8px;
+    width: 3px;
+    background: #8ab99b;
+}
+.timeline-item {
+    position: relative;
+    margin-bottom: 25px;
+}
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -31px;
+    top: 7px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--green);
+    border: 3px solid white;
+    box-shadow: 0 0 0 2px var(--green);
+}
+
+.site-footer {
+    background: #0d2417;
+    color: #dbe7de;
+}
+.site-footer a {
+    display: block;
+    color: #dbe7de;
+    text-decoration: none;
+    margin-bottom: 8px;
+}
+.site-footer a:hover { color: white; }
+
+.admin-sidebar {
+    min-height: calc(100vh - 72px);
+    background: #205235;
+}
+.admin-sidebar a {
+    display: block;
+    color: #5eb874;
+    padding: 12px 15px;
+    text-decoration: none;
+    border-radius: 10px;
+    margin-bottom: 4px;
+}
+.admin-sidebar a:hover { background: rgba(53, 170, 49, 0.1); }
+
+.login-card {
+    max-width: 480px;
+    margin: 70px auto;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    box-shadow: 0 15px 45px rgba(0,0,0,.08);
+}
+
+@media (max-width: 991px) {
+    .hero, .map-preview, .preview-map-content { min-height: 350px; }
+    .hero-content { padding: 35px; }
+}
+
+@media (max-width: 575px) {
+    .hero-content { padding: 28px; }
+    .hero-content h1 { font-size: 2.25rem; }
+    .detail-image { height: 280px; }
+    #map { height: 480px; }
+}
+
